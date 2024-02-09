@@ -1,8 +1,8 @@
-import {CustomerReviews,Footer,Hero,PopularProduct,Service,SpecialOffer,Subscribe,SuperQuality} from "./components/Imports.js"
+import {Nav,CustomerReviews,Footer,Hero,PopularProduct,Service,SpecialOffer,Subscribe,SuperQuality} from "./components/Imports.js"
 function App() {
   return (
     <main className="relative">
-      Nav
+      <Nav/>
       <section className="xl:padding-1 wide:padding-r padding-b">
         <Hero/>
       </section>
