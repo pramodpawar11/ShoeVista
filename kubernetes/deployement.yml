@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shoe-application
+  namespace: shoe-app-ns
+  labels:
+    app: shoe-app
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: shoe-app
+
+  template:
+    metadata:
+      labels:
+        app: shoe-app
+
+    spec:
+      containers:
+        - name: shoe-application
+          image: pramodpawar11/shoe-application
+          ports:
+            - containerPort: 3000
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+            limits:
+              cpu: 200m
+              memory: 512Mi
